@@ -5,3 +5,4 @@ qtbuild/
 qtbuild-x86/
 # Qt source and install directories
 qt-*/
+bld/
