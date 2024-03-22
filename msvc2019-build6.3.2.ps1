@@ -5,7 +5,7 @@
 $version_base = "6.3"
 $version = "6.3.2"
 
-$qt_sources_url = "https://download.qt.io/official_releases/qt/" + $version_base + "/" + $version + "/single/qt-everywhere-src-" + $version + ".zip"
+#$qt_sources_url = "https://download.qt.io/official_releases/qt/" + $version_base + "/" + $version + "/single/qt-everywhere-src-" + $version + ".zip"
 $qt_archive_file = $pwd.Path + "\qt-" + $version + ".zip"
 $qt_src_base_folder = $pwd.Path + "\qt-everywhere-src-" + $version
 
@@ -45,8 +45,8 @@ $ProgressPreference = 'SilentlyContinue'
 $AllProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
 [System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
 
-Invoke-WebRequest -Uri $qt_sources_url -OutFile $qt_archive_file
-& "$tools_folder\7za.exe" x $qt_archive_file
+#Invoke-WebRequest -Uri $qt_sources_url -OutFile $qt_archive_file
+#& "$tools_folder\7za.exe" x $qt_archive_file
 
 # Configure.
 mkdir $build_folder
